@@ -1,17 +1,21 @@
-{
-  "name": "btcwallet",
-  "version": "1.0.0",
+"name": "bip174",
+  "version": "3.0.0-rc.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "src/cjs/lib/psbt.js",
+  "module": "src/esm/lib/psbt.js",
+  "types": "src/cjs/lib/psbt.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/cjs/lib/psbt.d.ts",
+      "import": "./src/esm/lib/psbt.js",
+      "require": "./src/cjs/lib/psbt.js"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bip32": "^2.0.6",
-    "bip39": "^3.0.4",
-    "bitcoinjs-lib": "^6.0.1"
-  }
-}
+  "type": "type",
+  "files": [
+    "src/cjs/lib",
+    "src/esm/lib"
+    ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
